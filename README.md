@@ -5,3 +5,5 @@
 HOW TO DEPLOY
 
 ```npm run build```
+
+ONLINE HOSTED : `https://rgb-test-code.web.app/`
