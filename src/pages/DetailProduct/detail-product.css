@@ -1,0 +1,9 @@
+.container-detail-product {
+  margin-bottom: 100px;
+}
+
+.custom-layout br {
+  display: block;
+  content: "";
+  margin-bottom: 20px;
+}

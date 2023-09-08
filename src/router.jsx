@@ -1,15 +1,17 @@
 import { createBrowserRouter } from 'react-router-dom';
 
+import ListProduct from './pages/ListProduct/index.jsx';
+import DetailProduct from './pages/DetailProduct/index.jsx';
 import ErrorPage from './pages/error-page.jsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <div>List Product</div>,
+    element: <ListProduct />,
   },
   {
     path: '/product/:id',
-    element: <div>Detail Product</div>,
+    element: <DetailProduct />,
   },
   {
     path: '*',
