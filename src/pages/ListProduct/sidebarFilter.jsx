@@ -1,4 +1,4 @@
-import { Row, Col, InputGroup } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 
 export default function SidebarFilter(props) {
@@ -10,7 +10,7 @@ export default function SidebarFilter(props) {
           Rating 4 ke atas
         </Col>
         <Col sm="2" className="text-left" >
-          <input type="checkbox" />
+          <input type="checkbox" value="rating_4_up" onChange={props.onHandleFilterChange} />
         </Col>
       </Row>
       <Row style={{ marginTop: '20px' }} >
@@ -18,7 +18,7 @@ export default function SidebarFilter(props) {
           Stock tersedia
         </Col>
         <Col sm="2" className="text-left" >
-          <input type="checkbox" />
+          <input type="checkbox" value="stock_available" onChange={props.onHandleFilterChange} />
         </Col>
       </Row>
     </div>
