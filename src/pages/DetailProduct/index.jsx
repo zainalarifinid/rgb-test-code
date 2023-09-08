@@ -15,6 +15,7 @@ import {
 import CurrencyIcon from '../../assets/image/common/currency.svg';
 import BatikBackground from '../../assets/image/common/batik-background.svg';
 
+import SpecialIcon from '../../components/SpecialIcon.jsx';
 import RatingReviews from '../../components/RatingReviews.jsx';
 import GenerateBreadcrumb from './components/GenerateBreadcrumb.jsx'; 
 import QtyPicker from './components/QtyPicker.jsx';
@@ -46,7 +47,7 @@ export default function DetailProduct() {
   if(!detailProduct) return <></>;
 
   return (
-    <Container className='container-detail-product' >
+    <Container className='container-detail-product'>
       <Row>
         <Col>
           <GenerateBreadcrumb structureBreadcrumb={structureBreadcrumb} />
@@ -58,7 +59,12 @@ export default function DetailProduct() {
           {detailProduct?.attributes?.images.map((item, index) => {
             return (
               // eslint-disable-next-line react/jsx-key
-              <Carousel.Item key={`carousel-item-${index}`} >
+              <Carousel.Item key={`carousel-item-${index}`} style={{ position: 'inherit' }} >
+                <SpecialIcon
+                  isNew={detailProduct?.attributes?.isNew}
+                  rating={detailProduct?.attributes?.rating}
+                  numOfReviews={detailProduct?.attributes?.numOfReviews}
+                />
                 <Image key={`image-${index}`} src={item} alt='Product Image' fluid />
               </Carousel.Item>
             )
